@@ -3,6 +3,8 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^1.8.0
   '@vue/compiler-sfc': ^3.2.12
+  '@vueform/toggle': ^2.0.1
+  localforage: ^1.10.0
   swiper: ^7.0.6
   typescript: ^4.4.3
   unplugin-auto-import: ^0.4.6
@@ -17,6 +19,8 @@ specifiers:
   windicss: ^3.1.7
 
 dependencies:
+  '@vueform/toggle': 2.0.1
+  localforage: 1.10.0
   swiper: 7.0.6
   vue: 3.2.12
   vue-router: 4.0.11_vue@3.2.12
@@ -1432,6 +1436,10 @@ packages:
   /@vue/shared/3.2.12:
     resolution: {integrity: sha512-5CkaifUCJwcTuru7FDwKFacPJuEoGUTw0LKSa5bw40B23s0TS+MGlYR1285nbV/ju3QUGlA6d6PD+GJkWy7uFg==}
 
+  /@vueform/toggle/2.0.1:
+    resolution: {integrity: sha512-Hx26jK+hJUndP4zUBXdScYnTlDwXhkRl+sPW1srkOHqImAcyV2932LzavZQIqK1MhBBukKt+X0wkR5cJL7duYw==}
+    dev: false
+
   /@windicss/config/1.4.3_typescript@4.4.3:
     resolution: {integrity: sha512-6lm1EFmnDHfmgyVl2PJ2PVy4puYp6+99QFkuQlzcjAZfJ1bLGtk1Yl/LlWTz2BVzORUvqWmGLFXTCC1oPBrGVQ==}
     dependencies:
@@ -2191,6 +2199,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immediate/3.0.6:
+    resolution: {integrity: sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=}
+    dev: false
+
   /import-cwd/3.0.0:
     resolution: {integrity: sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==}
     engines: {node: '>=8'}
@@ -2482,6 +2494,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /lie/3.1.1:
+    resolution: {integrity: sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=}
+    dependencies:
+      immediate: 3.0.6
+    dev: false
+
   /lilconfig/2.0.3:
     resolution: {integrity: sha512-EHKqr/+ZvdKCifpNrJCKxBTgk5XupZA3y/aCPY9mxfgBzmgh93Mt/WqjjQ38oMxXuvDokaKiM3lAgvSH2sjtHg==}
     engines: {node: '>=10'}
@@ -2499,6 +2517,12 @@ packages:
       emojis-list: 3.0.0
       json5: 1.0.1
     dev: true
+
+  /localforage/1.10.0:
+    resolution: {integrity: sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg==}
+    dependencies:
+      lie: 3.1.1
+    dev: false
 
   /lodash.camelcase/4.3.0:
     resolution: {integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=}

@@ -5,9 +5,9 @@ import TheFooter from '../components/TheFooter.vue'
 
 <template>
   <div>
-    <TheHeader class="col-span-full" />
+    <TheHeader class="col-span-full dark:bg-dark-100" />
     <div class="row-start-2 row-end-12">Analytics</div>
-    <TheFooter class="col-span-full" />
+    <TheFooter class="col-span-full dark:bg-dark-100" />
   </div>
 </template>
 
