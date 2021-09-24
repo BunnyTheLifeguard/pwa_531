@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const goToHome = () => router.push({ name: 'home' })
-const goToCal = () => router.push({ name: 'calendar' })
+const goToWorkout = () => router.push({ name: 'workout' })
 const goToAnalytics = () => router.push({ name: 'analytics' })
 const goToSettings = () => router.push({ name: 'settings' })
 </script>
@@ -29,9 +29,10 @@ const goToSettings = () => router.push({ name: 'settings' })
         fill="currentColor"
       ></path>
     </svg>
-    <!-- Calendar -->
+
+    <!-- Workout -->
     <svg
-      @click="goToCal"
+      @click="goToWorkout"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
@@ -47,23 +48,7 @@ const goToSettings = () => router.push({ name: 'settings' })
         fill="currentColor"
       ></path>
     </svg>
-    <!-- <svg
-      @click="goToCal"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      aria-hidden="true"
-      role="img"
-      class="iconify iconify--mdi"
-      width="24"
-      height="24"
-      preserveAspectRatio="xMidYMid meet"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5z"
-        fill="currentColor"
-      ></path>
-    </svg> -->
+
     <!-- Chart -->
     <svg
       @click="goToAnalytics"
@@ -82,6 +67,7 @@ const goToSettings = () => router.push({ name: 'settings' })
         fill="currentColor"
       ></path>
     </svg>
+
     <!-- Settings -->
     <svg
       @click="goToSettings"

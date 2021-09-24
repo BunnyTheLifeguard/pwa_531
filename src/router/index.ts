@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Onboarding from '../views/Onboarding.vue'
 import Analytics from '../views/Analytics.vue'
-import Calendar from '../views/Calendar.vue'
+import Workout from '../views/Workout.vue'
 import Settings from '../views/Settings.vue'
+import Weights from '../views/Weights.vue'
 import Support from '../views/Support.vue'
 import NotFound from '../views/NotFound.vue'
 
@@ -24,14 +25,19 @@ const routes = [
     component: Analytics
   },
   {
-    path: '/calendar',
-    name: 'calendar',
-    component: Calendar
+    path: '/workout',
+    name: 'workout',
+    component: Workout
   },
   {
     path: '/settings',
     name: 'settings',
     component: Settings
+  },
+  {
+    path: '/weights',
+    name: 'weights',
+    component: Weights
   },
   {
     path: '/support',

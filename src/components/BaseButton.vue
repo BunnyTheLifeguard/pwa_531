@@ -1,26 +1,38 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 
 const props = defineProps({
   variant: {
     type: String,
+    required: true,
     validators: (value: string) =>
       ['primary', 'secondary', 'success', 'warning', 'danger'].includes(value)
   }
 })
 
-const bgColor = ref('')
+const color1 = ref('')
+const color2 = ref('')
+const textColor = ref('text-white')
 
 if (props.variant === 'primary') {
-  bgColor.value = 'blue'
+  color1.value = 'from-blue-600'
+  color2.value = 'to-light-blue-400'
 } else if (props.variant === 'secondary') {
-  bgColor.value = 'gray'
+  color1.value = 'from-gray-500'
+  color2.value = 'to-gray-300'
 } else if (props.variant === 'success') {
-  bgColor.value = 'green'
+  color1.value = 'from-green-600'
+  color2.value = 'to-lime-500'
 } else if (props.variant === 'warning') {
-  bgColor.value = 'yellow'
-} else {
-  bgColor.value = 'red'
+  color1.value = 'from-yellow-500'
+  color2.value = 'to-yellow-300'
+} else if (props.variant === 'danger') {
+  color1.value = 'from-red-600'
+  color2.value = 'to-orange-500'
+} else if (props.variant === 'disabled') {
+  color1.value = 'from-true-gray-600'
+  color2.value = 'to-true-gray-500'
+  textColor.value = 'text-true-gray-400'
 }
 </script>
 
@@ -31,9 +43,9 @@ if (props.variant === 'primary') {
       font-bold
       uppercase
       tracking-wide
-      text-white
-      bg-${bgColor}-600
-      shadow`"
+      ${textColor}
+      bg-gradient-to-tl ${color1} ${color2}
+      shadow-lg`"
   >
     <slot />
   </button>

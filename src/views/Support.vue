@@ -22,11 +22,19 @@ const copyMonero = async () => {
 
 <template>
   <div>
-    <TheHeader class="col-span-full dark:bg-dark-100" />
+    <TheHeader class="col-span-full dark:bg-dark-100" pageName="settings" />
 
-    <div class="col-start-2 col-end-12 row-start-2 row-end-12 mt-7">
-      <div class="text-lg text-center mb-10">
-        If you want to support the project, you can do so via:
+    <div
+      class="
+        col-start-2 col-end-12
+        row-start-2 row-end-12
+        flex flex-col
+        justify-center
+      "
+    >
+      <div class="text-base pm:text-lg text-center mb-3 pm:mb-5">
+        If you want to support the development of the project, you can do so
+        via:
       </div>
 
       <!-- BTC -->
@@ -37,8 +45,8 @@ const copyMonero = async () => {
           aria-hidden="true"
           role="img"
           class="iconify iconify--fa-brands"
-          width="64"
-          height="64"
+          width="48"
+          height="48"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 512 512"
         >
@@ -47,13 +55,13 @@ const copyMonero = async () => {
             fill="currentColor"
           ></path>
         </svg>
-        <span class="my-5 font-bold uppercase">Bitcoin:</span>
+        <span class="my-3 pm:my-5 font-bold uppercase">Bitcoin:</span>
         <span id="bitcoin">{{ btc }}</span>
         <BaseButton
           @click="copyBitcoin"
           variant="primary"
           id="btnBTC"
-          class="py-3 px-10 my-5"
+          class="py-2 pm:py-3 px-10 my-3 pm:my-5"
           >Copy Address</BaseButton
         >
       </div>
@@ -66,8 +74,8 @@ const copyMonero = async () => {
           aria-hidden="true"
           role="img"
           class="iconify iconify--fa-brands"
-          width="64"
-          height="64"
+          width="48"
+          height="48"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 496 512"
         >
@@ -76,18 +84,18 @@ const copyMonero = async () => {
             fill="currentColor"
           ></path>
         </svg>
-        <span class="my-5 font-bold uppercase">Monero:</span>
+        <span class="my-3 pm:my-5 font-bold uppercase">Monero:</span>
         <span id="monero">{{ xmr }}</span>
         <BaseButton
           @click="copyMonero"
           variant="primary"
           id="btnXMR"
-          class="py-3 px-10 my-5"
+          class="py-2 pm:py-3 px-10 my-3 pm:my-5"
           >Copy Address</BaseButton
         >
       </div>
 
-      <div class="text-lg text-center mt-3">Thank you.</div>
+      <div class="text-lg text-center">Thank you.</div>
     </div>
     <TheFooter class="col-span-full dark:bg-dark-100" />
   </div>
